@@ -8,8 +8,8 @@ function AQIStandard({ className, type }) {
     <span
       className={clsx(
         "py-1 px-3 rounded-3xl text-center text-xs inline-block",
-        bgColor,
-        color,
+        "bg-" + bgColor,
+        "text-" + color,
         className
       )}
     >
