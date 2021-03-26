@@ -7,9 +7,7 @@ export default function Home() {
         <title>Air Quality Monitor</title>
       </Head>
 
-      <main>
-        <h1>Hello World!</h1>
-      </main>
+      <main className="p-3 bg-white"></main>
     </div>
   );
 }

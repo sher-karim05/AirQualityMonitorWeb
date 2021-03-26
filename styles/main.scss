@@ -1,1 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// @tailwind colors;
 
+body {
+  @apply bg-primary;
+  @apply p-10;
+}
