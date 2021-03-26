@@ -16,14 +16,14 @@ export default function Home() {
 
           <div className="bg-gray-200 flex-1 p-10 pl-20">
             <div className="flex flex-wrap">
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
-              <CityBox title="Mumbai" />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
+              <CityBox title="Mumbai" aqi={172.56} />
             </div>
           </div>
         </div>
