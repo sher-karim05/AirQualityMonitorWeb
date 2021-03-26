@@ -8,24 +8,93 @@ export default function Home() {
         <title>Air Quality Monitor</title>
       </Head>
 
-      <main className="bg-white rounded-md">
-        <div className="w-1/3">
-          <CardContainer className="bg-primary rounded-t-none rounded-bl-none rounded-br-lg text-white p-10 pt-3 pl-3">
-            <div className="text-4xl">
-              Air Quality
-              <br /> Monitor
+      <main className="rounded-md">
+        <div className="flex relative">
+          <div className="flex flex-col h-screen sticky left-0 top-0">
+            <div className="flex-1 bg-white rounded-3xl rounded-r-none"></div>
+            <div className="bg-white">
+              <CardContainer className="bg-primary rounded-3xl rounded-l-none text-white p-10">
+                <div className="text-4xl">Air Quality Monitor</div>
+              </CardContainer>
             </div>
-          </CardContainer>
+            <div className="flex-1 bg-white rounded-3xl rounded-r-none"></div>
+          </div>
+          <div className="bg-white flex-1">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </main>
     </div>
   );
