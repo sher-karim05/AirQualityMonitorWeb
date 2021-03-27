@@ -10,9 +10,6 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    client.onopen = () => {
-      console.log("connected!");
-    };
     client.onmessage = ({ data }) => setData(JSON.parse(data));
   });
 
@@ -23,7 +20,7 @@ export default function Home() {
       </Head>
 
       <main className="rounded-md">
-        <div className="flex relative pl-10">
+        <div className="md:flex relative pl-10">
           <BrandBox />
 
           <div className="bg-gray-200 flex-1 p-10 ">

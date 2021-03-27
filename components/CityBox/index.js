@@ -5,8 +5,8 @@ function CityBox({ title, aqi }) {
   const [aqiBase, aqiDecimal] = (aqi + "").split(".");
 
   return (
-    <div className="w-1/3 p-5">
-      <CardContainer className="bg-white border-2 border-primary-light">
+    <div className="lg:w-1/3 p-5">
+      <CardContainer className="w-full bg-white border-2 border-primary-light">
         <div className="flex justify-between">
           <div>
             <div className="text-xl">{title}</div>
