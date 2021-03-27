@@ -1,6 +1,8 @@
+import clsx from "clsx";
 import React from "react";
 import ReactTimeAgo from "react-time-ago";
 import CardContainer from "../../containers/CardContainer";
+import { getAQIStandard } from "../../utils";
 
 function CityBox({ title, aqi, date }) {
   const [aqiBase, aqiDecimal] = (aqi + "").split(".");
@@ -20,9 +22,9 @@ function CityBox({ title, aqi, date }) {
             </div>
           </div>
 
-          <div>
+          <div className={"text-" + getAQIStandard(aqi).bgColor}>
             <span className="text-4xl">{aqiBase}</span>
-            <span className="text-md text-gray-600">.{aqiDecimal}</span>
+            <span className="text-md">.{aqiDecimal}</span>
           </div>
         </div>
       </CardContainer>
