@@ -11,8 +11,6 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    client.onopen = () => console.log(":connected");
-
     client.onmessage = ({ data }) =>
       setData(updateCitiesArray([], JSON.parse(data)));
   });
@@ -30,7 +28,12 @@ export default function Home() {
           <div className="bg-gray-200 flex-1 p-10 ">
             <div className="flex flex-wrap">
               {data.map(({ city, aqi, date }, index) => (
-                <CityBox key={index} title={city} aqi={aqi.toFixed(2)} />
+                <CityBox
+                  key={index}
+                  title={city}
+                  aqi={aqi.toFixed(2)}
+                  date={date}
+                />
               ))}
             </div>
           </div>

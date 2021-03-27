@@ -1,7 +1,8 @@
 import React from "react";
+import ReactTimeAgo from "react-time-ago";
 import CardContainer from "../../containers/CardContainer";
 
-function CityBox({ title, aqi }) {
+function CityBox({ title, aqi, date }) {
   const [aqiBase, aqiDecimal] = (aqi + "").split(".");
 
   return (
@@ -10,7 +11,9 @@ function CityBox({ title, aqi }) {
         <div className="flex justify-between">
           <div>
             <div className="text-xl">{title}</div>
-            <div className="text-xs text-gray-400">a min ago</div>
+            <div className="text-xs text-gray-400">
+              <ReactTimeAgo date={date} locale="en-US" />
+            </div>
           </div>
 
           <div>
