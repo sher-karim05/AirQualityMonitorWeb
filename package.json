@@ -13,7 +13,8 @@
     "next": "10.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "websocket": "^1.0.33"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

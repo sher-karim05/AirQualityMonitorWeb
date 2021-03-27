@@ -1,8 +1,21 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import { w3cwebsocket } from "websocket";
 import BrandBox from "../components/BrandBox";
 import CityBox from "../components/CityBox";
 
+const client = new w3cwebsocket("ws://city-ws.herokuapp.com");
+
 export default function Home() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    client.onopen = () => {
+      console.log("connected!");
+    };
+    client.onmessage = ({ data }) => setData(JSON.parse(data));
+  });
+
   return (
     <div>
       <Head>
@@ -15,14 +28,9 @@ export default function Home() {
 
           <div className="bg-gray-200 flex-1 p-10 ">
             <div className="flex flex-wrap">
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
-              <CityBox title="Mumbai" aqi={172.56} />
+              {data.map(({ city, aqi }, index) => (
+                <CityBox key={index} title={city} aqi={aqi.toFixed(2)} />
+              ))}
             </div>
           </div>
         </div>
