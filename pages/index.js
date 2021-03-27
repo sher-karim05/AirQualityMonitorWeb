@@ -25,8 +25,8 @@ export default function Home() {
         <div className="md:flex relative pl-10">
           <BrandBox />
 
-          <div className="bg-gray-200 flex-1 p-10 ">
-            <div className="flex flex-wrap">
+          <div className="bg-gray-200 flex-1 p-5 min-h-screen">
+            <div className="lg:flex flex-wrap">
               {cities.map(({ city, aqi, date }, index) => (
                 <CityBox
                   key={index}
