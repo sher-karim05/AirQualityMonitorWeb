@@ -12,7 +12,11 @@ function CityBox({ title, aqi, date }) {
           <div>
             <div className="text-xl">{title}</div>
             <div className="text-xs text-gray-400">
-              <ReactTimeAgo date={date} locale="en-US" />
+              <ReactTimeAgo
+                date={date || new Date().getTime()}
+                locale="en-US"
+                // timeStyle="twitter" // * enable this see that the time is in fact working in the intended way. Its just that the values are updating very frequently that it never reaches to a '1 minute' and thus nothing changes.
+              />
             </div>
           </div>
 
