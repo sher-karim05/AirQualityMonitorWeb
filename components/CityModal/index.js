@@ -3,6 +3,7 @@ import Modal from "react-awesome-modal";
 import ReactTimeAgo from "react-time-ago/commonjs/ReactTimeAgo";
 import { getAQIStandard, getFormattedAQI } from "../../utils";
 import dynamic from "next/dynamic";
+import Live from "./../Live";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
@@ -45,14 +46,18 @@ function CityModal({ visible, hide, city = {} }) {
           />
         </div>
 
-        <div className="text-xs mt-2 text-right">
-          <span>Last updated: </span>
-          <span className="text-gray-600">
-            <ReactTimeAgo
-              date={city.date || new Date().getTime()}
-              locale="en-US"
-            />
-          </span>
+        <div className="text-xs mt-2 flex justify-between items-end">
+          <Live />
+
+          <div>
+            <span>Last updated: </span>
+            <span className="text-gray-600">
+              <ReactTimeAgo
+                date={city.date || new Date().getTime()}
+                locale="en-US"
+              />
+            </span>
+          </div>
         </div>
       </div>
     </Modal>
