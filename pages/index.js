@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { w3cwebsocket } from "websocket";
 import BrandBox from "../components/BrandBox";
 import CityBox from "../components/CityBox";
-import { updateCitiesArray as getUpdatedCitiesArray } from "../utils";
+import { updateCitiesArray } from "../utils";
 
 const client = new w3cwebsocket("ws://city-ws.herokuapp.com");
 
@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     client.onmessage = ({ data }) =>
-      setCities(getUpdatedCitiesArray(cities, JSON.parse(data)));
+      setCities(updateCitiesArray(cities, JSON.parse(data)));
   });
 
   return (
