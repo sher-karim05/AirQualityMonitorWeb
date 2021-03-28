@@ -23,7 +23,7 @@ function CityModal({ visible, hide, city = {} }) {
     },
   ];
 
-  console.log(city.aqi, city.history);
+  console.log(city, city.history);
 
   return (
     <Modal visible={visible} width="90%" height="80%" onClickAway={hide}>
@@ -36,10 +36,11 @@ function CityModal({ visible, hide, city = {} }) {
         <div className="mt-2">
           <span className="text-2xl">{city.city}</span>
           <span className="text-xs text-gray-600 ml-2">
-            <ReactTimeAgo
+            {city.date}
+            {/* <ReactTimeAgo
               date={city.date || new Date().getTime()}
               locale="en-US"
-            />
+            /> */}
           </span>
         </div>
 

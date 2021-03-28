@@ -1,19 +1,27 @@
 import { AQI_STANDARDS } from "../components/AQIStandard/data";
+import { MAX_HISTORY_ITEMS } from "./variables";
 
 function updateCitiesArray(cities, data) {
   const map = new Map();
 
   for (const city of [...cities, ...data]) {
+    // ? does already have city
     if (map.has(city.city)) {
-      const hCity = map.get(city.city);
+      const oldCity = map.get(city.city);
 
-      if (hCity.aqi != city.city) {
+      // * aqi has been changed, update time & add to history
+      if (oldCity.aqi != city.city) {
         city.date = new Date().getTime();
 
-        city.history = hCity.history ? hCity.history : [];
+        city.history = oldCity.history || [];
 
         city.history.push(city.aqi.toFixed(2));
       }
+    }
+
+    // + Limit history size
+    if (city.history && city.history.length > MAX_HISTORY_ITEMS) {
+      city.history.splice(0, 1);
     }
 
     map.set(city.city, { ...city });
