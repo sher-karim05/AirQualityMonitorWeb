@@ -33,7 +33,7 @@ export default function Home() {
                 <CityBox
                   key={index}
                   title={city}
-                  aqi={aqi.toFixed(2)}
+                  aqi={aqi}
                   date={date}
                   showModal={show}
                 />

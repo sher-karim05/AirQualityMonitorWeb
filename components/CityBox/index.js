@@ -1,13 +1,11 @@
 import React from "react";
 import ReactTimeAgo from "react-time-ago";
 import CardContainer from "../../containers/CardContainer";
-import { getAQIStandard } from "../../utils";
+import { getFormattedAQI, getAQIStandard } from "../../utils";
 import Image from "next/image";
 
-// import imgSpark from "/assets/images/spark.png";
-
 function CityBox({ title, aqi, date, showModal }) {
-  const [aqiBase, aqiDecimal] = (aqi + "").split(".");
+  const [aqiBase, aqiDecimal] = getFormattedAQI(aqi);
 
   return (
     <div className="lg:w-1/2 xl:w-1/3 p-5 relative">

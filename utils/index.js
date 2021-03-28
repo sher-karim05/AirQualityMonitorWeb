@@ -18,6 +18,10 @@ function updateCitiesArray(cities, data) {
   return [...map.values()];
 }
 
+function getFormattedAQI(aqi) {
+  return !aqi ? [] : (aqi.toFixed(2) + "").split(".");
+}
+
 function getAQIStandard(aqi) {
   if (aqi > 400) return AQI_STANDARDS.severe;
   if (aqi > 300) return AQI_STANDARDS.very_poor;
@@ -27,4 +31,4 @@ function getAQIStandard(aqi) {
   if (aqi <= 50) return AQI_STANDARDS.good;
 }
 
-export { updateCitiesArray, getAQIStandard };
+export { updateCitiesArray, getFormattedAQI, getAQIStandard };
