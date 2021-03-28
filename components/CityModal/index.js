@@ -2,7 +2,6 @@ import React from "react";
 import Modal from "react-awesome-modal";
 import ReactTimeAgo from "react-time-ago/commonjs/ReactTimeAgo";
 import { getAQIStandard, getFormattedAQI } from "../../utils";
-import { useModal } from "./hooks";
 
 function CityModal({ visible, hide, city = {} }) {
   const [aqiBase, aqiDecimal] = getFormattedAQI(city.aqi);
@@ -30,4 +29,3 @@ function CityModal({ visible, hide, city = {} }) {
 }
 
 export default CityModal;
-export { useModal };

@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 import { w3cwebsocket } from "websocket";
 import BrandBox from "../components/BrandBox";
 import CityBox from "../components/CityBox";
-import CityModal, { useModal } from "../components/CityModal";
+import CityModal from "../components/CityModal";
+import { useCitySelector } from "../hooks";
 import { updateCitiesArray } from "../utils";
 
 const client = new w3cwebsocket("ws://city-ws.herokuapp.com");
 
 export default function Home() {
   const [cities, setCities] = useState([]);
-  const { visible, hide, show } = useModal(false);
+  const [selectedCity, setSelectedCity, clearSelectedCity] = useCitySelector();
 
   useEffect(() => {
     client.onmessage = ({ data }) =>
@@ -35,14 +36,20 @@ export default function Home() {
                   title={city}
                   aqi={aqi}
                   date={date}
-                  showModal={show}
+                  showModal={setSelectedCity}
                 />
               ))}
             </div>
           </div>
         </div>
 
-        <CityModal visible={visible} hide={hide} city={cities[0]} />
+        {selectedCity && (
+          <CityModal
+            visible={true}
+            hide={clearSelectedCity}
+            city={selectedCity}
+          />
+        )}
       </main>
     </div>
   );
