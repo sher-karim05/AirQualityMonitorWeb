@@ -6,7 +6,7 @@ import Image from "next/image";
 
 // import imgSpark from "/assets/images/spark.png";
 
-function CityBox({ title, aqi, date }) {
+function CityBox({ title, aqi, date, showModal }) {
   const [aqiBase, aqiDecimal] = (aqi + "").split(".");
 
   return (
@@ -34,6 +34,7 @@ function CityBox({ title, aqi, date }) {
       <div
         className="rounded-full bg-white w-10 h-10 absolute bottom-0 ml-5 border-2 border-primary-light overflow-hidden p-2 cursor-pointer transform hover:scale-110 transition-all"
         title="View Graph"
+        onClick={showModal}
       >
         <Image src="/assets/images/graph.png" width="100" height="100" />
       </div>
