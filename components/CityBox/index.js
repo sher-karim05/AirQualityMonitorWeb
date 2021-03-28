@@ -32,7 +32,7 @@ function CityBox({ city, aqi, date, history, showModal }) {
       <div
         className="rounded-full bg-white w-10 h-10 absolute bottom-0 ml-5 border-2 border-primary-light overflow-hidden p-2 cursor-pointer transform hover:scale-110 transition-all"
         title="View Graph"
-        onClick={() => showModal({ city, aqi, date })}
+        onClick={() => showModal({ city, aqi, date, history })}
       >
         <Image src="/assets/images/graph.png" width="100" height="100" />
       </div>

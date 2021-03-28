@@ -12,7 +12,7 @@ function updateCitiesArray(cities, data) {
 
         city.history = hCity.history ? hCity.history : [];
 
-        city.history.push(city.aqi);
+        city.history.push(city.aqi.toFixed(2));
       }
     }
 
