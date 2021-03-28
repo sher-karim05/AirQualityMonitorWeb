@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
 
-        <CityModal visible={visible} hide={hide} />
+        <CityModal visible={visible} hide={hide} city={cities[0]} />
       </main>
     </div>
   );
