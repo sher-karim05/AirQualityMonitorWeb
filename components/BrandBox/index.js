@@ -3,6 +3,7 @@ import CardContainer from "../../containers/CardContainer";
 import { AQI_STANDARDS } from "../../utils/variables";
 import AQIStandard from "../AQIStandard";
 import Live from "../Live";
+import SocialLinks from "../SocialLinks";
 
 function BrandBox() {
   return (
@@ -12,7 +13,10 @@ function BrandBox() {
       <div className="bg-gray-200">
         <CardContainer className="bg-primary rounded-3xl rounded-l-none text-white p-10 mr-10 md:mr-0">
           <Live className="mb-2" />
-          <div className="text-3xl font-bold">Air Quality Monitor</div>
+
+          <div className="text-3xl font-bold mb-3">Air Quality Monitor</div>
+
+          <SocialLinks />
         </CardContainer>
       </div>
 

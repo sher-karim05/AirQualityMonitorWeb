@@ -20,6 +20,12 @@ export default function Home() {
     <div>
       <Head>
         <title>Air Quality Monitor</title>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/assets/images/logo.png"
+        />
       </Head>
 
       <main className="rounded-md">
