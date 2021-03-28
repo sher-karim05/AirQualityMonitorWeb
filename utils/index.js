@@ -4,15 +4,19 @@ function updateCitiesArray(cities, data) {
   const map = new Map();
 
   for (const city of [...cities, ...data]) {
-    if (!map.has(city.city)) {
-      map.set(city.city, { ...city });
-    } else {
-      map.set(city.city, {
-        ...map.get(city.city),
-        ...city,
-        date: new Date().getTime(),
-      });
+    if (map.has(city.city)) {
+      const hCity = map.get(city.city);
+
+      if (hCity.aqi != city.city) {
+        city.date = new Date().getTime();
+
+        city.history = hCity.history ? hCity.history : [];
+
+        city.history.push(city.aqi);
+      }
     }
+
+    map.set(city.city, { ...city });
   }
 
   return [...map.values()];

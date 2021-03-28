@@ -30,12 +30,13 @@ export default function Home() {
 
           <div className="bg-gray-200 flex-1 p-5 min-h-screen">
             <div className="lg:flex flex-wrap">
-              {cities.map(({ city, aqi, date }, index) => (
+              {cities.map((city, index) => (
                 <CityBox
                   key={index}
-                  title={city}
-                  aqi={aqi}
-                  date={date}
+                  {...city}
+                  // title={city}
+                  // aqi={aqi}
+                  // date={date}
                   showModal={setSelectedCity}
                 />
               ))}

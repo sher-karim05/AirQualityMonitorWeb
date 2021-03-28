@@ -4,7 +4,7 @@ import CardContainer from "../../containers/CardContainer";
 import { getFormattedAQI, getAQIStandard } from "../../utils";
 import Image from "next/image";
 
-function CityBox({ title, aqi, date, showModal }) {
+function CityBox({ city, aqi, date, history, showModal }) {
   const [aqiBase, aqiDecimal] = getFormattedAQI(aqi);
 
   return (
@@ -12,7 +12,7 @@ function CityBox({ title, aqi, date, showModal }) {
       <CardContainer className="w-full bg-white border-2 border-primary-light pb-8 hover:shadow-lg transition-all">
         <div className="flex justify-between">
           <div>
-            <div className="text-xl">{title}</div>
+            <div className="text-xl">{city}</div>
             <div className="text-xs text-gray-400">
               <ReactTimeAgo
                 date={date || new Date().getTime()}
@@ -32,7 +32,7 @@ function CityBox({ title, aqi, date, showModal }) {
       <div
         className="rounded-full bg-white w-10 h-10 absolute bottom-0 ml-5 border-2 border-primary-light overflow-hidden p-2 cursor-pointer transform hover:scale-110 transition-all"
         title="View Graph"
-        onClick={() => showModal({ city: title, aqi, date })}
+        onClick={() => showModal({ city, aqi, date })}
       >
         <Image src="/assets/images/graph.png" width="100" height="100" />
       </div>
