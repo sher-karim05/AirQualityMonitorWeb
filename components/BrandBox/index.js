@@ -2,6 +2,7 @@ import React from "react";
 import CardContainer from "../../containers/CardContainer";
 import AQIStandard from "../AQIStandard";
 import { AQI_STANDARDS } from "../AQIStandard/data";
+import Live from "../Live";
 
 function BrandBox() {
   return (
@@ -10,9 +11,7 @@ function BrandBox() {
 
       <div className="bg-gray-200">
         <CardContainer className="bg-primary rounded-3xl rounded-l-none text-white p-10 mr-10 md:mr-0">
-          <div className="text-md mb-2">
-            Live <span className="text-red-600">&bull;</span>
-          </div>
+          <Live className="mb-2" />
           <div className="text-3xl font-bold">Air Quality Monitor</div>
         </CardContainer>
       </div>

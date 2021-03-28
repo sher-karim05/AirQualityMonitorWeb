@@ -4,3 +4,13 @@ body {
   @apply bg-primary;
   font-family: ABeeZee;
 }
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
