@@ -6,7 +6,7 @@ import CityBox from "../components/CityBox";
 import Loader from "../components/Loader";
 import { updateCitiesArray } from "../utils";
 
-const client = new w3cwebsocket("ws://city-ws.herokuapp.com");
+const client = new w3cwebsocket("wss://city-ws.herokuapp.com");
 
 export default function Home() {
   const [cities, setCities] = useState([]);
