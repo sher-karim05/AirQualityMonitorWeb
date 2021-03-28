@@ -1,7 +1,7 @@
 import React from "react";
 import CardContainer from "../../containers/CardContainer";
+import { AQI_STANDARDS } from "../../utils/variables";
 import AQIStandard from "../AQIStandard";
-import { AQI_STANDARDS } from "../AQIStandard/data";
 import Live from "../Live";
 
 function BrandBox() {

@@ -1,5 +1,4 @@
-import { AQI_STANDARDS } from "../components/AQIStandard/data";
-import { MAX_HISTORY_ITEMS } from "./variables";
+import { AQI_STANDARDS, MAX_HISTORY_ITEMS } from "./variables";
 
 function updateCitiesArray(cities, data) {
   const map = new Map();
