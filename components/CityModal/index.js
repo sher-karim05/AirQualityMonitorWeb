@@ -23,25 +23,16 @@ function CityModal({ visible, hide, city = {} }) {
     },
   ];
 
-  console.log(city, city.history);
-
   return (
     <Modal visible={visible} width="90%" height="80%" onClickAway={hide}>
       <div className="p-5">
-        <div className={"text-" + getAQIStandard(city.aqi).bgColor}>
-          <span className="text-5xl">{aqiBase}</span>
-          <span className="text-xl">.{aqiDecimal}</span>
+        <div className="mb-3">
+          <span className="text-2xl">{city.city}</span>
         </div>
 
-        <div className="mt-2">
-          <span className="text-2xl">{city.city}</span>
-          <span className="text-xs text-gray-600 ml-2">
-            {city.date}
-            {/* <ReactTimeAgo
-              date={city.date || new Date().getTime()}
-              locale="en-US"
-            /> */}
-          </span>
+        <div className={"text-" + getAQIStandard(city.aqi).bgColor}>
+          <span className="text-6xl">{aqiBase}</span>
+          <span className="text-2xl">.{aqiDecimal}</span>
         </div>
 
         <div className="mt-5 border">
@@ -52,6 +43,16 @@ function CityModal({ visible, hide, city = {} }) {
             width="100%"
             height="300px"
           />
+        </div>
+
+        <div className="text-xs mt-2 text-right">
+          <span>Last updated: </span>
+          <span className="text-gray-600">
+            <ReactTimeAgo
+              date={city.date || new Date().getTime()}
+              locale="en-US"
+            />
+          </span>
         </div>
       </div>
     </Modal>

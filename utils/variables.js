@@ -1,3 +1,3 @@
-const MAX_HISTORY_ITEMS = 100;
+const MAX_HISTORY_ITEMS = 50;
 
 export { MAX_HISTORY_ITEMS };
