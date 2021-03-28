@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { w3cwebsocket } from "websocket";
 import BrandBox from "../components/BrandBox";
 import CityBox from "../components/CityBox";
+import Loader from "../components/Loader";
 import { updateCitiesArray } from "../utils";
 
 const client = new w3cwebsocket("ws://city-ws.herokuapp.com");
@@ -26,11 +27,15 @@ export default function Home() {
           <BrandBox />
 
           <div className="bg-gray-200 flex-1 p-5 min-h-screen">
-            <div className="lg:flex flex-wrap">
-              {cities.map((city, index) => (
-                <CityBox key={index} {...city} />
-              ))}
-            </div>
+            {cities.length <= 0 ? (
+              <Loader className="mt-10" />
+            ) : (
+              <div className="lg:flex flex-wrap">
+                {cities.map((city, index) => (
+                  <CityBox key={index} {...city} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </main>
