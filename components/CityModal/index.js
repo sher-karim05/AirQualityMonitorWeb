@@ -1,8 +1,10 @@
 import React from "react";
 import Modal from "react-awesome-modal";
 import ReactTimeAgo from "react-time-ago/commonjs/ReactTimeAgo";
-import Chart from "react-apexcharts";
 import { getAQIStandard, getFormattedAQI } from "../../utils";
+import dynamic from "next/dynamic";
+
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 function CityModal({ visible, hide, city = {} }) {
   const [aqiBase, aqiDecimal] = getFormattedAQI(city.aqi);
@@ -11,9 +13,7 @@ function CityModal({ visible, hide, city = {} }) {
     chart: {
       id: "apexchart-example",
     },
-    xaxis: {
-      // categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
-    },
+    xaxis: {},
   };
 
   const series = [
