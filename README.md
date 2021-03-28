@@ -19,7 +19,7 @@ The below images are linked to full size images :)
   <img align="center" src="./samples/modal.png" width="45%" />
 </a>
 
-## Techs Used
+## Technologies Used
 **Built with**
 - ReactJS + NextJs
 
@@ -46,6 +46,7 @@ The below images are linked to full size images :)
 - Fully responsive
 - Neat Graphs
 - Color based status
+- Download Graphs as PNG, SVG or CSV
 
 ## Installation
 First, run the development server:
