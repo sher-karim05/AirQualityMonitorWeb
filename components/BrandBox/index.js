@@ -6,7 +6,7 @@ import Live from "../Live";
 import SocialLinks from "../SocialLinks";
 import CompareBox from "./CompareBox";
 
-function BrandBox() {
+function BrandBox({ cities }) {
   return (
     <div className="flex flex-col md:h-screen md:sticky left-0 top-0">
       <div className="bg-gray-200 rounded-3xl rounded-tl-none rounded-r-none pt-10"></div>
@@ -32,7 +32,7 @@ function BrandBox() {
           ))}
         </div>
 
-        <CompareBox/>
+        <CompareBox cities={cities} />
       </div>
     </div>
   );
