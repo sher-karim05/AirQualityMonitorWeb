@@ -1,10 +1,14 @@
+import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
-function ActionButton({ action, title, image }) {
+function ActionButton({ active = false, action, title, image }) {
   return (
     <div
-      className="rounded-full bg-white w-10 h-10 mr-3 border-2 border-primary-light overflow-hidden p-2 cursor-pointer transform hover:scale-110 transition-all"
+      className={clsx(
+        "rounded-full w-10 h-10 mr-3 border-2 border-primary-light overflow-hidden p-2 cursor-pointer transform hover:scale-110 transition-all",
+        active ? "bg-primary-light" : "bg-white"
+      )}
       title={title}
       onClick={action}
     >
@@ -13,7 +17,7 @@ function ActionButton({ action, title, image }) {
   );
 }
 
-function ActionBar({ graphAction, compareAction }) {
+function ActionBar({ graphAction, compareAction, selected }) {
   return (
     <div className="absolute bottom-0 ml-5 flex">
       <ActionButton
@@ -23,6 +27,7 @@ function ActionBar({ graphAction, compareAction }) {
       />
 
       <ActionButton
+        active={selected}
         action={compareAction}
         title="Select for Compare"
         image="/assets/images/compare.png"

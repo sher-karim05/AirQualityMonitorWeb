@@ -16,6 +16,19 @@ export default function Home() {
       setCities(updateCitiesArray(cities, JSON.parse(data)));
   });
 
+  const selectForCompare = (city) => {
+    console.log("Er");
+    cities.map((c) => {
+      if (c.city == city) {
+        c.selected = !c.selected;
+      }
+    });
+
+    setCities(cities);
+  };
+
+  console.log(cities);
+
   return (
     <div>
       <Head>
@@ -38,7 +51,11 @@ export default function Home() {
             ) : (
               <div className="lg:flex flex-wrap">
                 {cities.map((city, index) => (
-                  <CityBox key={index} {...city} />
+                  <CityBox
+                    key={index}
+                    {...city}
+                    selectForCompare={selectForCompare}
+                  />
                 ))}
               </div>
             )}
