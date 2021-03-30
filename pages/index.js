@@ -16,19 +16,6 @@ export default function Home() {
       setCities(updateCitiesArray(cities, JSON.parse(data)));
   });
 
-  const selectForCompare = (city) => {
-    console.log("Er");
-    cities.map((c) => {
-      if (c.city == city) {
-        c.selected = !c.selected;
-      }
-    });
-
-    setCities(cities);
-  };
-
-  console.log(cities);
-
   return (
     <div>
       <Head>
@@ -42,24 +29,20 @@ export default function Home() {
       </Head>
 
       <main className="rounded-md">
-        <div className="flex flex-col-reverse md:flex-row-reverse relative pl-10">
+        <div className="md:flex relative pl-10">
+          <BrandBox cities={cities} />
+
           <div className="bg-gray-200 flex-1 p-5 min-h-screen">
             {cities.length <= 0 ? (
               <Loader className="mt-10" />
             ) : (
               <div className="lg:flex flex-wrap">
                 {cities.map((city, index) => (
-                  <CityBox
-                    key={index}
-                    {...city}
-                    selectForCompare={selectForCompare}
-                  />
+                  <CityBox key={index} {...city} />
                 ))}
               </div>
             )}
           </div>
-
-          <BrandBox cities={cities} />
         </div>
       </main>
     </div>

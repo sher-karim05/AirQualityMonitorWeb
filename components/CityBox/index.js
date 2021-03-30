@@ -6,7 +6,7 @@ import Image from "next/image";
 import CityModal from "../CityModal";
 import ActionBar from "./ActionBar";
 
-function CityBox({ city, aqi, date, history, selected, selectForCompare }) {
+function CityBox({ city, aqi, date, history }) {
   const [aqiBase, aqiDecimal] = getFormattedAQI(aqi);
   const [visible, setVisible] = useState(false);
 
@@ -32,11 +32,7 @@ function CityBox({ city, aqi, date, history, selected, selectForCompare }) {
         </div>
       </CardContainer>
 
-      <ActionBar
-        graphAction={() => setVisible(true)}
-        compareAction={() => selectForCompare(city)}
-        selected={selected}
-      />
+      <ActionBar graphAction={() => setVisible(true)} />
 
       <CityModal
         visible={visible}
