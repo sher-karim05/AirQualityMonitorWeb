@@ -4,6 +4,7 @@ import { AQI_STANDARDS } from "../../utils/variables";
 import AQIStandard from "../AQIStandard";
 import Live from "../Live";
 import SocialLinks from "../SocialLinks";
+import CompareBox from "./CompareBox";
 
 function BrandBox() {
   return (
@@ -30,6 +31,8 @@ function BrandBox() {
             />
           ))}
         </div>
+
+        <CompareBox/>
       </div>
     </div>
   );
