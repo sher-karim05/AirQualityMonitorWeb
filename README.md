@@ -19,6 +19,10 @@ The below images are linked to full size images :)
   <img align="center" src="./samples/modal.png" width="45%" />
 </a>
 
+<a href="./samples/compare.png">
+  <img align="center" src="./samples/compare.png" width="45%" />
+</a>
+
 ## Technologies Used
 **Built with**
 - ReactJS + NextJs
