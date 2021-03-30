@@ -38,6 +38,17 @@ function CompareBox({ cities }) {
       alert("You can't select same country twice!");
       return;
     }
+
+    cities.forEach((city) => {
+      if (city.city === selectA.current.value) {
+        setCityA(city);
+      }
+      if (city.city === selectB.current.value) {
+        setCityB(city);
+      }
+    });
+
+    setVisible(true);
   };
 
   return (
