@@ -42,9 +42,7 @@ export default function Home() {
       </Head>
 
       <main className="rounded-md">
-        <div className="md:flex relative pl-10">
-          <BrandBox cities={cities} />
-
+        <div className="flex flex-col-reverse md:flex-row-reverse relative pl-10">
           <div className="bg-gray-200 flex-1 p-5 min-h-screen">
             {cities.length <= 0 ? (
               <Loader className="mt-10" />
@@ -60,6 +58,8 @@ export default function Home() {
               </div>
             )}
           </div>
+
+          <BrandBox cities={cities} />
         </div>
       </main>
     </div>

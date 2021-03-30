@@ -72,14 +72,12 @@ function CompareBox({ cities }) {
         </div>
       </div>
 
-      {cityA && cityB && (
-        <CityCompareModal
-          visible={visible}
-          hide={() => setVisible(false)}
-          cityA={cityA}
-          cityB={cityB}
-        />
-      )}
+      <CityCompareModal
+        visible={visible}
+        hide={() => setVisible(false)}
+        cityA={cityA}
+        cityB={cityB}
+      />
     </>
   );
 }
