@@ -24,8 +24,6 @@ function CompareBox({ cities }) {
   const selectB = useRef();
 
   const processCompare = () => {
-    console.log(selectA.current.value, selectB.current.value);
-
     if (selectA.current.value === "" || selectB.current.value === "") {
       alert("You must select two cities to compare!");
       return;
