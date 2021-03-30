@@ -19,6 +19,10 @@ The below images are linked to full size images :)
   <img align="center" src="./samples/modal.png" width="45%" />
 </a>
 
+<a href="./samples/compare.png">
+  <img align="center" src="./samples/compare.png" width="45%" />
+</a>
+
 ## Technologies Used
 **Built with**
 - ReactJS + NextJs
@@ -61,13 +65,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Time Record
 
-**`Total time: 8 h 39 m 24 s`**
+**`Total time: 9 h 49 m 30 s`**
 
 A detailed list of how much time I spent on which task **from most to least**.
 
 |Task|Time|
 |-|-|
-|Developing Frontend|2h 45 m 06 s|
+|Developing Frontend|3h 45 m 06 s|
 |Creating History Chart|52 m 13 s|
 |README|56 m 17 s|
 |Draw Wire frames|35 m 22 s|
@@ -84,6 +88,7 @@ A detailed list of how much time I spent on which task **from most to least**.
 |Showing Live City in Modal|25 m 28 s|
 |Updating *Updated* Time|22m 56 s|
 |Storing AQI History|11 m 26 s|
+|Select cities for comparison|10 m 06 s|
 |Converting AQI Data|05 m 28 s|
 |Limit History Items|03 m 27 s|
 

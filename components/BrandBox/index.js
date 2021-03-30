@@ -4,10 +4,11 @@ import { AQI_STANDARDS } from "../../utils/variables";
 import AQIStandard from "../AQIStandard";
 import Live from "../Live";
 import SocialLinks from "../SocialLinks";
+import CompareBox from "./CompareBox";
 
-function BrandBox() {
+function BrandBox({ cities }) {
   return (
-    <div className="flex flex-col md:h-screen md:sticky left-0 top-0">
+    <div className="flex flex-col md:h-screen left-0 top-0">
       <div className="bg-gray-200 rounded-3xl rounded-tl-none rounded-r-none pt-10"></div>
 
       <div className="bg-gray-200">
@@ -30,6 +31,8 @@ function BrandBox() {
             />
           ))}
         </div>
+
+        <CompareBox cities={cities} />
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ export default function Home() {
 
       <main className="rounded-md">
         <div className="md:flex relative pl-10">
-          <BrandBox />
+          <BrandBox cities={cities} />
 
           <div className="bg-gray-200 flex-1 p-5 min-h-screen">
             {cities.length <= 0 ? (
