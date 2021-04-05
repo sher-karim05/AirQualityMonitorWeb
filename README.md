@@ -4,7 +4,7 @@ A [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](h
 AQM is a single-page [web application](https://air-quality-monitor-pt.herokuapp.com/) to display live air quality monitoring data of a few cities in India.
 
 ## Motivation
-I built this project as an assignment for a job interview. Did I get it? Well, I will let you know ;)
+I built this project as an assignment for a job interview. Did I get it? Yes, I got the interview ;)
  
 ## Samples
 Click [here](./samples/wireframes/draft_a.png) to see the initial [`wireframe`](./samples/wireframes/draft_a.png).  
